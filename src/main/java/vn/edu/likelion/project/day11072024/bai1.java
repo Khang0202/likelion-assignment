@@ -9,9 +9,9 @@ public class bai1 {
         String filenameA = "A.txt";
 //        createB("akjcbacuoấnubad\n", source, filenameB);
 //        createA(source, filenameA);
-
-        new Thread(()-> {writeB(readA(source, filenameA).toString(), source, filenameB);
-        new Thread(()->delete(source, filenameA));});
+        createA(source, "StudentList.txt");
+//        new Thread(()-> {writeB(readA(source, filenameA).toString(), source, filenameB);
+//        new Thread(()->delete(source, filenameA));});
 
 
     }
@@ -100,29 +100,29 @@ public class bai1 {
 
     public static void createA(String source, String fileName) {
         FileOutputStream fos = null;
-        String content = "1\tNguyễn Hồ Thanh Bền\n" +
-                "2\tNguyễn Thanh Dân\n" +
-                "3\tTrần Tuấn Duy\n" +
-                "4\tLê Thu Hà\n" +
-                "5\tNguyễn Huy Hảo\n" +
-                "6\tTrần Chí Hạo\n" +
-                "7\tLê Trần Trung Hiếu\n" +
-                "8\tNguyễn Đồng Hưng\n" +
-                "9\tNguyễn Mạnh Khang\n" +
-                "10\tNguyễn Hà Kiên\n" +
-                "11\tVõ Thành Lên\n" +
-                "12\tKhổng Thị Gia Linh\n" +
-                "13\tNguyễn Phương Nam\n" +
-                "14\tPhạm Đức Nghĩa\n" +
-                "15\tLê Minh Nhựt\n" +
-                "16\tNguyễn Trọng Phúc\n" +
-                "17\tNguyễn Đức Tấn\n" +
-                "18\tBùi Quốc Thịnh\n" +
-                "19\tLê Văn Tính\n" +
-                "20\tNguyễn Võ Song Toàn\n" +
-                "21\tTrương Anh Tuấn\n" +
-                "22\tHồ Vĩnh Tường\n" +
-                "23\tTrần Phúc Vinh\n";
+        String content = "1\tNguyễn Hồ Thanh Bền\ttrue\n" +
+                "2\tNguyễn Thanh Dân\ttrue\n" +
+                "3\tTrần Tuấn Duy\ttrue\n" +
+                "4\tLê Thu Hà\ttrue\n" +
+                "5\tNguyễn Huy Hảo\ttrue\n" +
+                "6\tTrần Chí Hạo\ttrue\n" +
+                "7\tLê Trần Trung Hiếu\ttrue\n" +
+                "8\tNguyễn Đồng Hưng\ttrue\n" +
+                "9\tNguyễn Mạnh Khang\ttrue\n" +
+                "10\tNguyễn Hà Kiên\ttrue\n" +
+                "11\tVõ Thành Lên\ttrue\n" +
+                "12\tKhổng Thị Gia Linh\ttrue\n" +
+                "13\tNguyễn Phương Nam\ttrue\n" +
+                "14\tPhạm Đức Nghĩa\ttrue\n" +
+                "15\tLê Minh Nhựt\ttrue\n" +
+                "16\tNguyễn Trọng Phúc\ttrue\n" +
+                "17\tNguyễn Đức Tấn\ttrue\n" +
+                "18\tBùi Quốc Thịnh\ttrue\n" +
+                "19\tLê Văn Tính\ttrue\n" +
+                "20\tNguyễn Võ Song Toàn\ttrue\n" +
+                "21\tTrương Anh Tuấn\ttrue\n" +
+                "22\tHồ Vĩnh Tường\ttrue\n" +
+                "23\tTrần Phúc Vinh\ttrue\n";
         try {
             fos = new FileOutputStream(new String(source + fileName));
             fos.write(content.getBytes());
